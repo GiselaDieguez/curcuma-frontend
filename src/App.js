@@ -1,6 +1,6 @@
 import Header from './components/header';
 import { Home }  from './components/home';
-import { Searchpage } from './components/searchpage';
+import { Searchpage } from './components/searchpage.js';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Signin } from './components/signin';
