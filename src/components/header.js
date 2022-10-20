@@ -85,7 +85,7 @@ const Header = () => {
         </Link>
         <div className={classes.right}>
           <Button onClick={routeChange}>Sign In</Button>
-          <Avatar className={classes.avatar}/>
+          <Button onClick={routeChange2}><Avatar className={classes.avatar}/></Button>
         </div>
       </Toolbar>
     )
@@ -105,6 +105,7 @@ const useStyle = makeStyles((theme)=>({
     backgroundColor: "#fff",
     zIndex: 99,
     width: "100vw",
+    height: "80px"
   },
   toolbar: {
     display: "flex",
@@ -113,7 +114,7 @@ const useStyle = makeStyles((theme)=>({
 
   },
   logo: {
-    height: "110px",
+    height: "80px",
     /*objectFit: "contain" --> se preserban las dimensiones de la imagen*/
   },
   center: {

@@ -2,6 +2,7 @@ import React from 'react'
 import { CssBaseline, makeStyles, InputBase, Button } from '@material-ui/core'
 import SearchIcon from "@material-ui/icons/Search";
 import { Searchpage } from './searchpage';
+import { Footer } from './footer.js';
 
 
 export const Home = () => {
@@ -18,6 +19,7 @@ export const Home = () => {
         </div>
       </div>
       <Searchpage/>
+      <Footer />
     </>
   )
 }

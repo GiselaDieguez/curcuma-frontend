@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import './styles/styles.css'
 import signin from '../imagenes/signin.jpg'
 import { onRegistration } from '../api/api'
+import { Footer } from './footer'
+import Checkbox from '@mui/material/Checkbox';
 
 export const Signin = () => {
     const [values, setValues] = useState({
@@ -99,6 +101,7 @@ export const Signin = () => {
                     </div>
                 </div>
             </section>
+            <Footer />
         </div>
     )
 }

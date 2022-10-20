@@ -187,7 +187,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
   
   .main {
     background: #f8f8f8;
-    padding: 120px 0; }
+    padding: 50px 0; }
   
   .clear {
     clear: both; }
@@ -198,7 +198,11 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     color: #222;
     background: #f8f8f8;
     font-weight: 400;
-    font-family: Poppins; }
+    font-family: Poppins; 
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 96vh;
+  }
   
   .container {
     width: 900px;
@@ -252,12 +256,9 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
   .login {
     padding: 120px;
   }
-
-  .signup {
-    margin-bottom: 150px; }
   
   .signup-content {
-    padding: 60px 0; }
+    padding: 20px 0; }
   
   .signup-form, .signup-image, .signin-form, .signin-image {
     width: 50%;
@@ -278,23 +279,20 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
   
   .form-submit {
     display: inline-block;
-    background: #6dabe4;
+    background: #d68b20;
     color: #fff;
     border-bottom: none;
     width: auto;
-    padding: 15px 39px;
+    padding: 14px 40px;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     -o-border-radius: 5px;
     -ms-border-radius: 5px;
-    margin-top: 25px;
+    margin-top: 0px;
     cursor: pointer; }
     .form-submit:hover {
-      background: #4292dc; }
-  
-  #signin {
-    margin-top: 16px; }
+      background: #a87f02; }
   
   .signup-image-link {
     font-size: 14px;
@@ -388,7 +386,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     background-image: linear-gradient(white, white); }
   
   input[type=checkbox]:not(old):checked + label > span:before {
-    content: '\f26b';
+    content: "✓";
     display: block;
     color: #222;
     font-size: 11px;
