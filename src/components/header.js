@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { AppBar, InputBase, makeStyles, Toolbar, Typography, Avatar, IconButton, Drawer, List, ListItem, Button } from "@material-ui/core";
 import { useState } from "react";
 import logo from "../imagenes/Curcuma.png";
-import SearchIcon from "@material-ui/icons/Search";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import './styles/styles.css'
 
 const Header = () => {
   const [mobile, setMobile] =useState(true)
@@ -79,7 +79,7 @@ const Header = () => {
   }
 
   const displayDesktop = () => (
-    <Toolbar className={ classes.toolbar}>
+    <Toolbar className={classes.toolbar}>
         <Link to="/">
           <img src={logo} className={classes.logo} alt="logo"/>
         </Link>

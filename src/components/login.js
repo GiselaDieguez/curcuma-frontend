@@ -12,6 +12,7 @@ export const Login = () => {
         pass_us: "",
       })
     const [error, setError] = useState(false)
+    const [success, setSuccess] = useState()
       
     const onChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value })
@@ -21,6 +22,7 @@ export const Login = () => {
         e.preventDefault()
         try {
             const {data} = await onLogin(values)
+            setSuccess(data.message)
             console.log(data);
         } catch (error) {
             setError(error.response.data.errors[0].msg);
@@ -51,6 +53,9 @@ export const Login = () => {
                                   <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
                               </div>
                               {error && <p style={{ color: "red" }}>{error}</p>}
+                              {
+                                    success && <p style={{color: "green"}}>{success}</p>
+                                }
                               <div class="form-group form-button">
                                   <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
                               </div>

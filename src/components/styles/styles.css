@@ -591,4 +591,55 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
       margin-bottom: 10px; } }
   
   /*# sourceMappingURL=style.css.map */
+
+  .search {
+    font-family: Poppins;
+  }
+
+  .root {
+    position: "sticky";
+    /*top: ,*/
+    background-Color: "#fff";
+    z-Index: 99;
+    width: "100vw";
+    height: "80px"
+  }
+  
+  .toolbar {
+    display: "flex";
+    justify-Content: "space-between";
+    align-Items: "center"
+
+  }
+
+  .logo {
+    height: "80px";
+    /*objectFit: "contain" --> se preserban las dimensiones de la imagen*/
+  }
+
+  .center {
+    display: "flex";
+    align-items: "center";
+    padding: (1, 1, 1, 1);
+    margin: (1, 1, 1, 1);
+    border: "1px solid lightgrey";
+    border-Radius: "20px";
+    min-Width: (100px)
+  }
+
+  .input {
+    font-size:"1.5rem";
+    padding: (1,5,1,5)
+  }
+
+  .right {
+    color:"#333";
+    display: "flex";
+    align-items: "center";
+    margin-Left: (2)
+  }
+
+  .avatar {
+    margin-Left: (2)
+  }
   
