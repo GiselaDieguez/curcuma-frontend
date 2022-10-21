@@ -197,6 +197,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     line-height: 1.8;
     color: #222;
     background: #f8f8f8;
+    background-color: #f8f8f8;
     font-weight: 400;
     font-family: Poppins; 
     position: relative;
@@ -218,7 +219,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     -webkit-border-radius: 20px;
     -o-border-radius: 20px;
     -ms-border-radius: 20px; }
-  
+
   .display-flex {
     justify-content: space-between;
     -moz-justify-content: space-between;
@@ -516,7 +517,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     margin-right: 20px;
     margin-top: 10px; }
   
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1000px) {
     .container {
       width: calc( 100% - 30px);
       max-width: 100%; } }

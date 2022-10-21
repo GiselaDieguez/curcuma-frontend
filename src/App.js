@@ -5,6 +5,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Signin } from './components/signin';
 import { Login } from './components/login';
+import { Booking } from './components/booking';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/search" element={<Searchpage/>}/>
         <Route path="/signin" element={<Signin/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/booking" element={<Booking/>}/>
         <Route path="/*" element={<Home/>}/>
       </Routes>
     </BrowserRouter> 

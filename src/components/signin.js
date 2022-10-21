@@ -4,7 +4,6 @@ import './styles/styles.css'
 import signin from '../imagenes/signin.jpg'
 import { onRegistration } from '../api/api'
 import { Footer } from './footer'
-import Checkbox from '@mui/material/Checkbox';
 
 export const Signin = () => {
     const [values, setValues] = useState({
@@ -59,7 +58,7 @@ export const Signin = () => {
                                 </div>
                                 <div className="form-group">
                                     <label for="name"><i className="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input onChange={(e) => onChange(e)} type="date" value={values.date_us} name="date_us" id="date_us" placeholder="Your Date" autoComplete="off" required/>
+                                    <input onChange={(e) => onChange(e)} type="date" value={values.date_us} name="date_us" id="date_us" placeholder="Your Date" autoComplete="off" min="1940-01-01" max="2004-01-01" required/>
                                 </div>
                                 <div className="form-group">
                                     <label for="email"><i className="zmdi zmdi-email"></i></label>

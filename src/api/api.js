@@ -16,3 +16,7 @@ export async function onRegistration(registrationData) {
 export async function onLogin(loginData) {
   return await axios.post(`${url}/login`, loginData)
 }
+
+export async function createBooking(bookingData){
+  return await axios.post(`${url}/booking`, bookingData)
+}
