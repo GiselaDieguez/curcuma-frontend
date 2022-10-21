@@ -643,3 +643,6 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     margin-Left: (2)
   }
   
+  text {
+    font-family: Poppins;
+  }
