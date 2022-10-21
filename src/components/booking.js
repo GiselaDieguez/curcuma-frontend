@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './styles/styles.css'
 import booking from '../imagenes/booking.jpg'
-import { onRegistration } from '../api/api'
+import { onRegistration, url } from '../api/api'
 import { Footer } from './footer'
 import { useSelector } from 'react-redux'
 import { selectTurn } from '../redux/slices/turnSlice'
@@ -25,8 +25,7 @@ export const Booking = () => {
     }
 
     useEffect(() => {
-        //fetch(`EL LINK DE FLY HANII`)
-        fetch(`http://localhost:4000/prov/${state}`)
+        fetch(`${url}/prov/${state}`)
         .then((response) => response.json())
         .then((res) => {
             setFirst(res);

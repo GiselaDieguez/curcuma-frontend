@@ -11,7 +11,6 @@ export const Searchpage = () => {
 
   useEffect(() => {
     fetch(`${url}/listProv`) 
-    //fetch("https://curcuma.fly.dev/listProv")
       .then((response) => response.json())
       .then((res) => {
         setValues(res)
