@@ -6,8 +6,8 @@ export const Searchpage = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    fetch("http://localhost:4000/listProv") 
-    //fetch("https://curcuma.fly.dev/listProv")
+    //fetch("http://localhost:4000/listProv") 
+    fetch("https://curcuma.fly.dev/listProv")
       .then((response) => response.json())
       .then((res) => {
         setValues(res)
