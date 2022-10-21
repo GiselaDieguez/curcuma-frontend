@@ -1,19 +1,16 @@
 import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography, SendIcon } from '@material-ui/core';
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from "react-router-dom";
-
+import { useDispatch } from 'react-redux';
+import { NavLink } from "react-router-dom";
+import { url } from '../api/api';
+import { addTurn } from '../redux/slices/turnSlice';
 export const Searchpage = () => {
+  const dispatch = useDispatch();
   const [values, setValues] = useState()
   const [isLoading, setIsLoading] = useState(true)
 
-  let navigate = useNavigate(); 
-  const routeChange = () =>{ 
-    let path = '/booking'; 
-    navigate(path);
-  }
-
   useEffect(() => {
-    fetch("http://localhost:4000/listProv") 
+    fetch(`${url}/listProv`) 
     //fetch("https://curcuma.fly.dev/listProv")
       .then((response) => response.json())
       .then((res) => {
@@ -22,6 +19,10 @@ export const Searchpage = () => {
       });
   }, [isLoading]);
 
+  const handleSendProps = (id) =>{
+    dispatch(addTurn(id))
+  }
+  
   return (
     <>
     <div className='row' style={{width: "100%"}}>
@@ -52,9 +53,11 @@ export const Searchpage = () => {
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <Button variant="contained" onClick={routeChange}>
-                      Reservá Pa
-                    </Button>
+                    <NavLink to='/booking'>
+                      <Button variant="contained"  onClick={() => handleSendProps(prov.prov_id)}>
+                        Reservá Pa
+                      </Button>
+                    </NavLink>
                   </CardActions>
                 </Card>
               </div>                
