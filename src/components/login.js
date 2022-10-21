@@ -31,7 +31,7 @@ export const Login = () => {
   return (
     <><div>
           <section class="sign-in login">
-              <div class="container">
+              <div class="container2">
                   <div class="signin-content">
                       <div class="signin-image">
                           <figure><img src={login} alt="Log in image" /></figure>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './styles/styles.css'
 import booking from '../imagenes/booking.jpg'
-import { onRegistration, url } from '../api/api'
+import { createBooking, url } from '../api/api'
 import { Footer } from './footer'
 import { useSelector } from 'react-redux'
 import { selectTurn } from '../redux/slices/turnSlice'
@@ -36,7 +36,7 @@ export const Booking = () => {
     const onSubmit = async (e) => {
         e.preventDefault()
         try {
-            const { data } = await onRegistration(values)
+            const { data } = await createBooking(values)
             setError('')
             setSuccess(data.message)
             setValues({
@@ -59,23 +59,22 @@ export const Booking = () => {
                 ): 
                 (
                 <div className="main">
-                    <section className="signup">
-                        <div className="container">
+                    <section className="signup login">
+                        <div className="container2">
                             <div className="signup-content">
                                 <div className="signup-form">
                                     <h2 className="form-title">Booking</h2>
-                                    <form className="register-form" id="register-form" onSubmit={(e) => onSubmit(e)}>
+                                    <form className="booking-form" id="booking-form" onSubmit={(e) => onSubmit(e)}>
                                         <div className="form-group">
-                                            <label for="name"><i className="zmdi zmdi-account material-icons-name"></i></label>
-                                            <input onChange={(e) => onChange(e)} type="date" value={values.date_res} name="date_res" id="date_res" placeholder="Your Date" autoComplete="off" min="1940-01-01" max="2004-01-01" required/>
+                                            <label for="date"><i className="zmdi zmdi-account"></i></label>
+                                            <input onChange={(e) => onChange(e)} type="date" value={values.date_res} name="date_res" id="date_res" placeholder="Your Date" autoComplete="off" min="22-10-2022" max="2023-01-01" required/>
                                         </div>
                                         <div className="form-group">
-                                            <label for="name"><i className="zmdi zmdi-account material-icons-name"></i></label>
-                                            <input onChange={(e) => onChange(e)} type="text" value={values.time_res} name="time_res" id="time_res" placeholder="Hour" autoComplete="off" required/>
+                                            <label for="time"><i className="zmdi zmdi-account"></i></label>
+                                            <input onChange={(e) => onChange(e)} type="time" value={values.time_res} name="time_res" id="time_res" placeholder="Hour" autoComplete="off" required/>
                                         </div>
                                         <div className="form-group">
-                                            <label for="email"><i className="zmdi zmdi-email"></i></label>
-                                            <input onChange={(e) => onChange(e)} type="email" value={first.name_prov} name="prov_id" id="prov_id" placeholder="Proov"  disabled/>
+                                            <input onChange={(e) => onChange(e)} type="text" value={first.name_prov} name="prov_id" id="prov_id" placeholder="Proov"  disabled/>
                                         </div>
                                         {
                                             error && <p style={{color: "red"}}>{error}</p>
@@ -84,7 +83,7 @@ export const Booking = () => {
                                             success && <p style={{color: "green"}}>{success}</p>
                                         }
                                         <div className="form-group form-button">
-                                            <input type="submit" name="signup" id="signup" className="form-submit" value="Generate" />
+                                            <input type="submit" name="booking" id="booking" className="form-submit" value="Generate" />
                                         </div>
                                     </form>
                                 </div>

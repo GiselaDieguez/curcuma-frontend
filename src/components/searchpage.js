@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 import { NavLink } from "react-router-dom";
 import { url } from '../api/api';
 import { addTurn } from '../redux/slices/turnSlice';
+import './styles/styles.css'
+
 export const Searchpage = () => {
   const dispatch = useDispatch();
   const [values, setValues] = useState()
@@ -38,7 +40,7 @@ export const Searchpage = () => {
                       component="img"
                       height="140"
                       image="https://cdn-3.expansion.mx/2a/df/e718a6454730a13f1aac0525e5ec/restaurante-cena-romantica-14-feb.jpg"
-                      alt="green iguana"
+                      alt="Restaurant"
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
@@ -52,8 +54,8 @@ export const Searchpage = () => {
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <NavLink to='/booking'>
-                      <Button variant="contained"  onClick={() => handleSendProps(prov.prov_id)}>
+                    <NavLink to='/booking' style={{textDecoration:"none"}}>
+                      <Button variant="contained"  onClick={() => handleSendProps(prov.prov_id)} style={{backgroundColor:"#d68b20", color: 'white'}}>
                         Reservá Pa
                       </Button>
                     </NavLink>
