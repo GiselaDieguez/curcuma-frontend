@@ -83,7 +83,7 @@ export const Booking = () => {
                                         {
                                             success && <p style={{color: "green"}}>{success}</p>
                                         }
-                                        <div className="form-group form-button">
+                                        <div className="form-group form-button" style={{paddingBottom:"10px"}}>
                                             <input type="submit" name="booking" id="booking" className="form-submit" value="Generate" />
                                         </div>
                                     </form>

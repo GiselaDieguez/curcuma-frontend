@@ -292,7 +292,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
   
   .form-submit {
     display: inline-block;
-    background: #d68b20;
+    background: #feb824;
     color: #fff;
     border-bottom: none;
     width: auto;
@@ -309,10 +309,10 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     0px 1px 5px 0px rgb(0 0 0 / 12%);
   }
     .form-submit:hover {
-      background: #a87f02; }
+      background: #d68b20; }
   
   .signup-image-link {
-    font-size: 14px;
+    font-size: 18px;
     color: #222;
     display: block;
     text-align: center; }

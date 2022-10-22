@@ -61,7 +61,7 @@ export const Login = () => {
                                     success && <p style={{color: "green"}}>{success}</p>
                                 }
                               <NavLink to="/home"> 
-                              <div class="form-group form-button">
+                              <div class="form-group form-button" style={{paddingBottom:"10px"}}>
                                   <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
                               </div>
                               </NavLink>

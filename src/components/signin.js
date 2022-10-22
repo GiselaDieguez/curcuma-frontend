@@ -84,7 +84,7 @@ export const Signin = () => {
                                 </div>
                                 {error && <p style={{ color: "red" }}>{error}</p>}
                                 {success && <p style={{ color: "green" }}>{success}</p>}
-                                <div className="form-group form-button">
+                                <div className="form-group form-button" style={{paddingBottom:"10px"}}>
                                     <input type="submit" name="signup" id="signup" className="form-submit" value="Register" />
                                 </div>
                             </form>

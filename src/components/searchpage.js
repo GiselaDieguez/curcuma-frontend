@@ -108,7 +108,7 @@ const filterAdress=(filterData)=>{
                   </CardActionArea>
                   <CardActions>
                     <NavLink to='/booking' style={{textDecoration:"none"}}>
-                      <Button variant="contained"  onClick={() => handleSendProps(prov.prov_id)} style={{backgroundColor:"#d68b20", color: 'white'}}>
+                      <Button variant="contained"  onClick={() => handleSendProps(prov.prov_id)} style={{backgroundColor:"#feb824", color: 'white'}}>
                         Reservá Pa
                       </Button>
                     </NavLink>
