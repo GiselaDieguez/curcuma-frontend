@@ -1,0 +1,41 @@
+body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bg-image {
+    background-image: url("./image/dinner.jpg");
+    filter: blur(8px) grayscale(1);
+    -webkit-filter: blur(8px) grayscale(1);
+    height: 100vh; 
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+.bg-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -74%);
+}
+
+.slogan {
+    position: absolute;
+    top: 44%;
+    left: 47%;
+    transform: translate(-40%, -40%);
+}
+
+.buttonNow {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-30%, -30%);
+    background-color: #feb824;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 44px;
+}
