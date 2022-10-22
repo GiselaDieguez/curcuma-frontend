@@ -14,8 +14,8 @@ export const Booking = () => {
         date_res: "",
         time_res: "",
         state_res: "Y",
-        prov_id: {state},
-        user_id: ""
+        prov_id: state,
+        user_id: "4"
     })
     const [error, setError] = useState(false)
     const [success, setSuccess] = useState(false)
@@ -32,7 +32,6 @@ export const Booking = () => {
         setIsLoading(false) 
         });
     }, []);
-    
     const onSubmit = async (e) => {
         e.preventDefault()
         try {
@@ -44,7 +43,7 @@ export const Booking = () => {
                 time_res: "",
                 state_res: "Y",
                 prov_id: "",
-                user_id: ""
+                user_id: "4"
             })
         } catch (error) {
             setError(error.response.data.errors[0].msg)
