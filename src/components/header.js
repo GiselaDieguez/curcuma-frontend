@@ -71,7 +71,7 @@ const Header = () => {
         <img src={logo} className={classes.logo} alt="logo"/>
       </Link>
       <div className={classes.right}>
-          <Button>Sign In</Button>
+          <Button style={{fontFamily:'Poppins'}}>Sign In</Button>
           <Button onClick={routeChange2}><Avatar className={classes.avatar}/></Button>
       </div>
     </Toolbar>

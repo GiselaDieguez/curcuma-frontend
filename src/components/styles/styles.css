@@ -668,3 +668,13 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
   .filters {
     display: flex;
   }
+
+  .vineImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    margin: 50px 0px;
+    width: 30px;
+    height: auto;
+  }

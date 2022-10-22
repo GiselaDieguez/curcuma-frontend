@@ -33,8 +33,9 @@ export const Login = () => {
   return (
     <>
     <Header />
-    <div>
-          <section class="main">
+    
+        <div>
+            <section class="main">
               <div class="container" style={{width:"900px"}}>
                   <div class="signin-content">
                       <div class="signin-image">
@@ -77,8 +78,10 @@ export const Login = () => {
                       </div>
                   </div>
               </div>
-          </section>
-        </div><Footer /></>
-  )
-  
+            </section>
+        </div>
+        <Footer />
+        </>
+    
+    )  
 }

@@ -8,6 +8,7 @@ import './styles/styles.css'
 import SearchIcon from "@material-ui/icons/Search";
 import { Footer } from './footer.js';
 import Header from './header';
+import vine from '../imagenes/wine.gif';
 
 export const Searchpage = () => {
   const dispatch = useDispatch();
@@ -67,14 +68,14 @@ const filterAdress=(filterData)=>{
       <div className={classes.root}>
         <div className={classes.dates}>
         <div className={classes.center} style={{border:"none", width: "566px"}}>
-          <SearchIcon/><input value={search} onChange={(e) => onChangeName(e)} placeholder='Search name..' inputProps={{className: classes.input}} style={{backgroundColor:"#f8f8f8"}}/>
+          <SearchIcon/><input value={search} onChange={(e) => onChangeName(e)} placeholder='Search name..' inputProps={{className: classes.input}} style={{backgroundColor:"#f8f8f8", fontFamily:'Poppins'}}/>
         </div>
         </div>
       </div>
       <div className={classes.root}>
         <div className={classes.dates}>
         <div className={classes.center} style={{border:"none", width: "566px"}}>
-          <SearchIcon/><input value={searchAdress} onChange={(e) => onChangeAdress(e)} placeholder='Search adress...' inputProps={{className: classes.input}} style={{backgroundColor:"#f8f8f8"}}/>
+          <SearchIcon/><input value={searchAdress} onChange={(e) => onChangeAdress(e)} placeholder='Search adress...' inputProps={{className: classes.input}} style={{backgroundColor:"#f8f8f8", fontFamily:'Poppins'}}/>
         </div>
         </div>
       </div>
@@ -82,7 +83,18 @@ const filterAdress=(filterData)=>{
     <div className='row' style={{width: "100%"}}>
       {
         isLoading ? (
-          <h1>Cargando...</h1>
+          <img src={vine} class="vineImg" style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-30%, -30%)',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '20px 0px',
+            margin: '50px 0px',
+            width: '200px',
+            height: 'auto'
+          }}></img>
         )
           : (
             values.map((prov) => (
@@ -96,10 +108,10 @@ const filterAdress=(filterData)=>{
                       alt="Restaurant"
                     />
                     <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
+                      <Typography gutterBottom variant="h5" component="div" style={{fontFamily:'Poppins'}}>
                         {prov.name_prov}
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="body2" color="text.secondary" style={{fontFamily:'Poppins'}}>
                         {prov.adress_prov}
                         <br></br>
                         {prov.tel_prov}
@@ -108,7 +120,7 @@ const filterAdress=(filterData)=>{
                   </CardActionArea>
                   <CardActions>
                     <NavLink to='/booking' style={{textDecoration:"none"}}>
-                      <Button variant="contained"  onClick={() => handleSendProps(prov.prov_id)} style={{backgroundColor:"#feb824", color: 'white'}}>
+                      <Button variant="contained"  onClick={() => handleSendProps(prov.prov_id)} style={{backgroundColor:"#feb824", color: 'white', fontFamily:'Poppins'}}>
                         Reservá Pa
                       </Button>
                     </NavLink>

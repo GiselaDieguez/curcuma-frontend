@@ -6,6 +6,7 @@ import { Footer } from './footer'
 import { useSelector } from 'react-redux'
 import { selectTurn } from '../redux/slices/turnSlice'
 import Header from './header'
+import vine from '../imagenes/wine.gif'
 
 export const Booking = () => {
     const state = useSelector(selectTurn);
@@ -56,7 +57,18 @@ export const Booking = () => {
         <Header />
         {
             isLoading ? (
-                <div>Cargando</div>
+                <img src={vine} class="vineImg" style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-30%, -30%)',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    padding: '20px 0px',
+                    margin: '50px 0px',
+                    width: '200px',
+                    height: 'auto'
+                  }}></img>
                 ): 
                 (
                 <div className="main">
