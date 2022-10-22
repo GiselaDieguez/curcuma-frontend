@@ -1,7 +1,6 @@
 import './styles/home.css'
 import { Footer } from './footer.js';
 import logo from './styles/image/Curcuma.png'
-import slogan from './styles/image/Slogan.png'
 import slogan2 from './styles/image/slogan2.png'
 import { NavLink } from 'react-router-dom';
 
