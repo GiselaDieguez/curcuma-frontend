@@ -79,7 +79,7 @@ const Header = () => {
   }
 
   const displayDesktop = () => (
-    <Toolbar className={classes.toolbar}>
+    <Toolbar className={classes.toolbar} style={{paddingLeft:"0px"}}>
         <Link to="/">
           <img src={logo} className={classes.logo} alt="logo"/>
         </Link>
@@ -104,8 +104,7 @@ const useStyle = makeStyles((theme)=>({
     top: 0,
     backgroundColor: "#fff",
     zIndex: 99,
-    width: "100vw",
-    height: "80px"
+    height: "80px",
   },
   toolbar: {
     display: "flex",
@@ -114,7 +113,7 @@ const useStyle = makeStyles((theme)=>({
 
   },
   logo: {
-    height: "80px",
+    height: "130px",
     /*objectFit: "contain" --> se preserban las dimensiones de la imagen*/
   },
   center: {
@@ -122,8 +121,6 @@ const useStyle = makeStyles((theme)=>({
     alignItems: "center",
     padding: theme.spacing(1),
     margin: theme.spacing(1),
-    border: "1px solid lightgrey",
-    borderRadius: "20px",
     minWidth: "100px"
   },
   input: {

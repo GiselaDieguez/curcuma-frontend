@@ -184,6 +184,11 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     color: #ffc20a;
   }
 
+  h1{
+    font-family: Poppins;
+
+  }
+
   h2 {
     line-height: 1.66;
     margin: 0;
@@ -226,23 +231,6 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     -webkit-border-radius: 20px;
     -o-border-radius: 20px;
     -ms-border-radius: 20px; }
-
-    .container2 {
-      width: 900px;
-      background: #fff;
-      margin: 0 auto;
-      box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
-      -moz-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
-      -webkit-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
-      -o-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
-      -ms-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
-      border-radius: 20px;
-      -moz-border-radius: 20px;
-      -webkit-border-radius: 20px;
-      -o-border-radius: 20px;
-      -ms-border-radius: 20px; 
-      padding-top: 30px;
-      padding-bottom: 30px;}
 
   .display-flex {
     justify-content: space-between;
@@ -675,4 +663,8 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
   
   text {
     font-family: Poppins;
+  }
+
+  .filters {
+    display: flex;
   }

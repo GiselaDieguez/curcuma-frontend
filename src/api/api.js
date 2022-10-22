@@ -2,8 +2,8 @@ import axios from 'axios'
 axios.defaults.withCredentials = true
 
 
-//export const url = 'http://localhost:4000'; 
-export const url = 'https://curcuma.fly.dev';
+export const url = 'http://localhost:4000'; 
+//export const url = 'https://curcuma.fly.dev';
 
 
 export async function onRegistration(registrationData) {

@@ -5,6 +5,8 @@ import { Footer } from './footer.js';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GoogleIcon from '@mui/icons-material/Google';
+import { NavLink } from 'react-router-dom';
+import Header from './header';
 
 export const Login = () => {
     const [values, setValues] = useState({
@@ -29,9 +31,11 @@ export const Login = () => {
         }
     }
   return (
-    <><div>
-          <section class="sign-in login">
-              <div class="container2">
+    <>
+    <Header />
+    <div>
+          <section class="main">
+              <div class="container" style={{width:"900px"}}>
                   <div class="signin-content">
                       <div class="signin-image">
                           <figure><img src={login} alt="Log in image" /></figure>
@@ -56,9 +60,11 @@ export const Login = () => {
                               {
                                     success && <p style={{color: "green"}}>{success}</p>
                                 }
+                              <NavLink to="/home"> 
                               <div class="form-group form-button">
                                   <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
                               </div>
+                              </NavLink>
                           </form>
                           <div class="social-login">
                               <span class="social-label">Or login with</span>

@@ -5,6 +5,7 @@ import { createBooking, url } from '../api/api'
 import { Footer } from './footer'
 import { useSelector } from 'react-redux'
 import { selectTurn } from '../redux/slices/turnSlice'
+import Header from './header'
 
 export const Booking = () => {
     const state = useSelector(selectTurn);
@@ -52,6 +53,7 @@ export const Booking = () => {
     }
     return (
         <>
+        <Header />
         {
             isLoading ? (
                 <div>Cargando</div>
@@ -59,7 +61,7 @@ export const Booking = () => {
                 (
                 <div className="main">
                     <section className="signup login">
-                        <div className="container2">
+                        <div className="container" style={{width:"900px"}}>
                             <div className="signup-content">
                                 <div className="signup-form">
                                     <h2 className="form-title">Booking</h2>

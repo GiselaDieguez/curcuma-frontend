@@ -1,21 +1,29 @@
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography, SendIcon } from '@material-ui/core';
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography, CssBaseline, makeStyles,  InputBase } from '@material-ui/core';
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { NavLink } from "react-router-dom";
 import { url } from '../api/api';
 import { addTurn } from '../redux/slices/turnSlice';
 import './styles/styles.css'
+import SearchIcon from "@material-ui/icons/Search";
+import { Footer } from './footer.js';
+import Header from './header';
 
 export const Searchpage = () => {
   const dispatch = useDispatch();
   const [values, setValues] = useState()
   const [isLoading, setIsLoading] = useState(true)
+  const [search, setSearchName] = useState("")
+  const [searchAdress, setSearchAdress] = useState("")
+  const [provTable, setTable]= useState([]);
+  const classes = useStyle()
 
   useEffect(() => {
     fetch(`${url}/listProv`) 
       .then((response) => response.json())
       .then((res) => {
-        setValues(res)
+        setValues(res);
+        setTable(res); 
         setIsLoading(false);
       });
   }, [isLoading]);
@@ -23,9 +31,54 @@ export const Searchpage = () => {
   const handleSendProps = (id) =>{
     dispatch(addTurn(id))
   }
-  
+
+const onChangeName = (e) => {
+  setSearchName(e.target.value)
+  filterName(e.target.value)
+}
+
+const onChangeAdress = (e) => {
+  setSearchAdress(e.target.value)
+  filterAdress(e.target.value)
+}
+
+const filterName=(filterData)=>{
+  var searchResults=provTable.filter((data) =>{
+    if (data.name_prov.toString().toLowerCase().includes(filterData.toLowerCase())) {
+      return data;
+    }
+  });
+  setValues(searchResults);
+}
+
+const filterAdress=(filterData)=>{
+  var adressResults=provTable.filter((data) =>{
+    if (data.adress_prov.toString().toLowerCase().includes(filterData.toLowerCase())) {
+      return data;
+    }
+  });
+  setValues(adressResults);
+}
   return (
-    <>
+    <> 
+    <Header />
+      <div className='filters'> 
+      <CssBaseline/>
+      <div className={classes.root}>
+        <div className={classes.dates}>
+        <div className={classes.center} style={{border:"none", width: "566px"}}>
+          <SearchIcon/><input value={search} onChange={(e) => onChangeName(e)} placeholder='Search name..' inputProps={{className: classes.input}} style={{backgroundColor:"#f8f8f8"}}/>
+        </div>
+        </div>
+      </div>
+      <div className={classes.root}>
+        <div className={classes.dates}>
+        <div className={classes.center} style={{border:"none", width: "566px"}}>
+          <SearchIcon/><input value={searchAdress} onChange={(e) => onChangeAdress(e)} placeholder='Search adress...' inputProps={{className: classes.input}} style={{backgroundColor:"#f8f8f8"}}/>
+        </div>
+        </div>
+      </div>
+      </div>
     <div className='row' style={{width: "100%"}}>
       {
         isLoading ? (
@@ -66,6 +119,25 @@ export const Searchpage = () => {
           )
       }
       </div>
+      <Footer />
     </>
   )
 }
+
+const useStyle = makeStyles((theme)=>({
+  root: {
+  },
+  center: {
+    display: "flex",
+    alignItems: "center",
+    padding: theme.spacing(0.5),
+    margin: theme.spacing(4),
+    border: "1px solid lightgrey",
+    borderRadius: "20px",
+    minWidth: "10px"
+  },
+  input: {
+    fontSize:"1.2rem",
+    padding: theme.spacing(1,4,1,4)
+  }
+}))
