@@ -678,3 +678,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     width: 30px;
     height: auto;
   }
+
+  .cardRestaurant {
+    max-height: 330px !important;
+  }

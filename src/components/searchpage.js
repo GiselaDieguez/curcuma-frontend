@@ -10,6 +10,7 @@ import { Footer } from './footer.js';
 import Header from './header';
 import vine from '../imagenes/wine.gif';
 
+
 export const Searchpage = () => {
   const dispatch = useDispatch();
   const [values, setValues] = useState()
@@ -18,6 +19,7 @@ export const Searchpage = () => {
   const [searchAdress, setSearchAdress] = useState("")
   const [provTable, setTable]= useState([]);
   const classes = useStyle()
+
 
   useEffect(() => {
     fetch(`${url}/listProv`) 
@@ -101,10 +103,11 @@ const filterAdress=(filterData)=>{
               <div className='col-md-4'>
                 <Card sx={{ maxWidth: 200 }} key={prov.prov_id} style={{margin:"10px"}}>
                   <CardActionArea>
+                    <CardMedia/>
                     <CardMedia
+                      className='cardRestaurant'
                       component="img"
-                      height="140"
-                      image="https://cdn-3.expansion.mx/2a/df/e718a6454730a13f1aac0525e5ec/restaurante-cena-romantica-14-feb.jpg"
+                      src={prov.URL}
                       alt="Restaurant"
                     />
                     <CardContent>
