@@ -7,12 +7,12 @@ import { NavLink } from 'react-router-dom';
 export const HomePage = () => {
     return (
         <body>
-            <div class="bg-image">
+            <div className="bg-image">
             </div>
-            <img src={logo} class="bg-logo"></img>
-            <img src={slogan2} class="slogan"></img>
+            <img src={logo} className="bg-logo"></img>
+            <img src={slogan2} className="slogan"></img>
             <NavLink to="/search">
-            <button class="buttonNow">Booking Now</button>
+            <button className="buttonNow">Booking Now</button>
             </NavLink>
             <Footer />
         </body>

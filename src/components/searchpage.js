@@ -68,12 +68,12 @@ const filterAdress=(filterData)=>{
       <div className='filters'> 
         <div className={classes.center} style={{border:"none", width: "566px"}}>
           <SearchIcon/><input value={search} onChange={(e) => onChangeName(e)} placeholder='Search name..' inputProps={{className: classes.input}} style={{backgroundColor:"rgb(255 255 255)", fontFamily:'Poppins'}}/>
-      </div>
+        </div>
         <div className={classes.center} style={{border:"none", width: "566px"}}>
           <SearchIcon/><input value={searchAdress} onChange={(e) => onChangeAdress(e)} placeholder='Search adress...' inputProps={{className: classes.input}} style={{backgroundColor:"rgb(255 255 255)", fontFamily:'Poppins'}}/>
+        </div>
       </div>
-      </div>
-    <div className='row' style={{width: "100%"}}>
+    <div className='row'>
       {
         isLoading ? (
           <img src={vine} class="vineImg" style={{
@@ -92,7 +92,7 @@ const filterAdress=(filterData)=>{
           : (
             values.map((prov) => (
               <div className='col-md-4'>
-                <Card sx={{ maxWidth: 200 }} key={prov.prov_id} style={{margin:"10px"}}>
+                <Card sx={{ maxWidth: "100%" }} key={prov.prov_id} style={{margin:"10px"}}>
                   <CardActionArea>
                     <CardMedia/>
                     <CardMedia
