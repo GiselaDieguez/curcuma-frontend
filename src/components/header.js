@@ -80,7 +80,7 @@ const Header = () => {
 
   const displayDesktop = () => (
     <Toolbar className={classes.toolbar} style={{paddingLeft:"0px"}}>
-        <Link to="/">
+        <Link to="/search">
           <img src={logo} className={classes.logo} alt="logo"/>
         </Link>
         <div className={classes.right}>

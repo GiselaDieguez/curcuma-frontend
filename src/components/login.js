@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { onLogin } from '../api/api'
 import login from '../imagenes/login.jpg'
 import { Footer } from './footer.js';
@@ -7,6 +7,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import GoogleIcon from '@mui/icons-material/Google';
 import { NavLink } from 'react-router-dom';
 import Header from './header';
+
 
 export const Login = () => {
     const [values, setValues] = useState({
@@ -36,7 +37,7 @@ export const Login = () => {
     
         <div>
             <section class="main">
-              <div class="container" style={{width:"900px"}}>
+              <div class="container shadowLog" style={{width:"900px"}}>
                   <div class="signin-content">
                       <div class="signin-image">
                           <figure><img src={login} alt="Log in image" /></figure>

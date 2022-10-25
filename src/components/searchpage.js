@@ -66,20 +66,11 @@ const filterAdress=(filterData)=>{
     <> 
     <Header />
       <div className='filters'> 
-      <CssBaseline/>
-      <div className={classes.root}>
-        <div className={classes.dates}>
         <div className={classes.center} style={{border:"none", width: "566px"}}>
-          <SearchIcon/><input value={search} onChange={(e) => onChangeName(e)} placeholder='Search name..' inputProps={{className: classes.input}} style={{backgroundColor:"#f8f8f8", fontFamily:'Poppins'}}/>
-        </div>
-        </div>
+          <SearchIcon/><input value={search} onChange={(e) => onChangeName(e)} placeholder='Search name..' inputProps={{className: classes.input}} style={{backgroundColor:"rgb(255 255 255)", fontFamily:'Poppins'}}/>
       </div>
-      <div className={classes.root}>
-        <div className={classes.dates}>
         <div className={classes.center} style={{border:"none", width: "566px"}}>
-          <SearchIcon/><input value={searchAdress} onChange={(e) => onChangeAdress(e)} placeholder='Search adress...' inputProps={{className: classes.input}} style={{backgroundColor:"#f8f8f8", fontFamily:'Poppins'}}/>
-        </div>
-        </div>
+          <SearchIcon/><input value={searchAdress} onChange={(e) => onChangeAdress(e)} placeholder='Search adress...' inputProps={{className: classes.input}} style={{backgroundColor:"rgb(255 255 255)", fontFamily:'Poppins'}}/>
       </div>
       </div>
     <div className='row' style={{width: "100%"}}>
@@ -146,7 +137,7 @@ const useStyle = makeStyles((theme)=>({
     display: "flex",
     alignItems: "center",
     padding: theme.spacing(0.5),
-    margin: theme.spacing(4),
+    margin: "24px",
     border: "1px solid lightgrey",
     borderRadius: "20px",
     minWidth: "10px"

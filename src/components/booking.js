@@ -73,7 +73,7 @@ export const Booking = () => {
                 (
                 <div className="main">
                     <section className="signup login">
-                        <div className="container" style={{width:"900px"}}>
+                        <div className="container shadowLog" style={{width:"900px"}}>
                             <div className="signup-content">
                                 <div className="signup-form">
                                     <h2 className="form-title">Booking</h2>
