@@ -5,7 +5,7 @@ import { Footer } from './footer.js';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GoogleIcon from '@mui/icons-material/Google';
-import { NavLink } from 'react-router-dom';
+import { Navigate, NavLink } from 'react-router-dom';
 import Header from './header';
 
 
@@ -26,7 +26,6 @@ export const Login = () => {
         try {
             const {data} = await onLogin(values)
             setSuccess(data.message)
-            console.log(data);
         } catch (error) {
             setError(error.response.data.errors[0].msg);
         }
@@ -43,7 +42,7 @@ export const Login = () => {
                           <figure><img src={login} alt="Log in image" /></figure>
                           <a href="/signin" class="signup-image-link">Create an account</a>
                       </div>
-                      <div class="signin-form">
+                      <div class="signin-form" action="/auth">
                           <h2 class="form-title">Log in</h2>
                           <form onSubmit={(e) => onSubmit(e)} class="register-form" id="login-form">
                               <div class="form-group">
@@ -59,15 +58,13 @@ export const Login = () => {
                                   <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
                               </div>
                               {error && <p style={{ color: "red" }}>{error}</p>}
-                              {
-                                    success && <p style={{color: "green"}}>{success}</p>
-                                }
-                              <NavLink to="/search"> 
                               <div class="form-group form-button" style={{paddingBottom:"10px"}}>
                                   <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
                               </div>
-                              </NavLink>
                           </form>
+                                {
+                                    success && <Navigate to="/search"/>
+                                }
                           <div class="social-login">
                               <span class="social-label">Or login with</span>
                               <ul class="socials">

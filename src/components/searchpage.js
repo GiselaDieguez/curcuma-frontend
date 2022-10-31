@@ -91,7 +91,7 @@ const filterAdress=(filterData)=>{
         )
           : (
             values.map((prov) => (
-              <div className='col-md-4'>
+              <div className='col-md-4' style={{padding:"0px"}}>
                 <Card sx={{ maxWidth: "100%" }} key={prov.prov_id} style={{margin:"10px"}}>
                   <CardActionArea>
                     <CardMedia/>
