@@ -24,6 +24,11 @@ const Header = () => {
     navigate2(path);
   }
 
+  const routeChange3 = () =>{ 
+    let path = '/list/bookings'; 
+    navigate2(path);
+  }
+
 
     useEffect(()=>{
       const responsiveness = () => window.innerWidth < 900 ? setMobile(true) : setMobile(false)
@@ -84,6 +89,7 @@ const Header = () => {
           <img src={logo} className={classes.logo} alt="logo"/>
         </Link>
         <div className={classes.right}>
+          <Button onClick={routeChange3}>Bookings</Button>
           <Button onClick={routeChange}>Sign In</Button>
           <Button onClick={routeChange2}><Avatar className={classes.avatar}/></Button>
         </div>

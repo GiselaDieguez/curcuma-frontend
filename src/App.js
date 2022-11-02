@@ -7,6 +7,7 @@ import { Login } from './components/login';
 import { Booking } from './components/booking';
 import { Terms } from './Terms';
 import { HomePage } from './components/homepage';
+import { ListBookings } from './components/listBookings';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/booking" element={<Booking/>}/>
         <Route path="/terms" element={<Terms/>}/>
         <Route path="/search" element={<Searchpage/>}/>
+        <Route path="/list/bookings" element={<ListBookings/>}/>
         <Route path="/*" element={<HomePage/>}/>
       </Routes>
     </BrowserRouter> 
