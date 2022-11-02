@@ -1,6 +1,7 @@
+import { Button } from 'bootstrap'
 import React, { useEffect, useState } from 'react'
 import { url } from '../api/api'
-import Header from './header'
+import HeaderUs from './headerUs'
 
 export const ListBookings = () => {
     const [values, setValues] = useState()
@@ -19,12 +20,12 @@ export const ListBookings = () => {
 
     return (
         <>
-            <Header />
+            <HeaderUs />
             {
                 loading ? (
                     <div>Cargando...</div>
                 ) : (
-                    <div className='container mt-5'>
+                    <div className='container mt-5 shadowLog reservations'>
                         <div className="list-group">
                             {values === undefined ||
                                 (values[0].date_res ||
@@ -34,17 +35,23 @@ export const ListBookings = () => {
                                     values[0].mail_prov ||
                                     values[0].adress_prov
                                 ) === null ? (
-                                <div>Todavía no hay reservas</div>
+                                <div>No reservations yet.</div>
                             ) : (
                                 values.map((booking, index) => (
-                                    <a href="#" className="list-group-item list-group-item-action" aria-current="true" key={index}>
+                                    <><a href="#" className="list-group-item list-group-item-action" aria-current="true" key={index}>
                                         <div className="d-flex w-100 justify-content-between">
                                             <h5 className="mb-1">{booking.name_prov}</h5>
-                                            <small>{booking.date_res.slice(0, -14)}</small>
+                                            <h6>{booking.date_res.slice(0, -14)}</h6>
                                         </div>
-                                        <p className="mb-1">{booking.time_res}</p>
-                                        <small>{booking.tel_prov}</small>
-                                    </a>
+                                        <p className="mb-1">Hour: {booking.time_res.slice(0, -3)}</p>
+                                        <p className="mb-1">Adress: {booking.adress_prov}</p>
+                                        <p>Telephone: {booking.tel_prov}</p>
+                                        <div className="d-flex w-100 justify-content-end">                                        
+                                        <button type="button" class="btn btn-outline-warning" style={{marginRight: "6px"}}>Modify</button>
+                                        <button type="button" class="btn btn-outline-danger">Cancel</button>
+                                        </div>
+                                        <div class="linea"></div>
+                                    </a></>
                                 ))
                             )
                             }

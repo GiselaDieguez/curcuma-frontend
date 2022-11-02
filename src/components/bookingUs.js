@@ -5,10 +5,10 @@ import { createBooking, url } from '../api/api'
 import { Footer } from './footer'
 import { useSelector } from 'react-redux'
 import { selectTurn } from '../redux/slices/turnSlice'
-import Header from './header'
 import vine from '../imagenes/wine.gif'
+import HeaderUs from './headerUs'
 
-export const Booking = () => {
+export const BookingUs = () => {
     const state = useSelector(selectTurn);
     const [first, setFirst] = useState()
     const [isLoading, setIsLoading] = useState(true)
@@ -54,7 +54,7 @@ export const Booking = () => {
     }
     return (
         <>
-        <Header />
+        <HeaderUs />
         {
             isLoading ? (
                 <img src={vine} class="vineImg" style={{

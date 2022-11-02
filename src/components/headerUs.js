@@ -7,22 +7,22 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import './styles/styles.css'
 
-const Header = () => {
+const HeaderUs = () => {
   const [mobile, setMobile] =useState(true)
   const [drawerOpen, setDrawerOpen]=useState(false)
   const classes = useStyle()
-  
-  let navigate = useNavigate(); 
-  const routeChange = () =>{ 
-    let path = '/signin'; 
-    navigate(path);
-  }
 
   let navigate2 = useNavigate(); 
   const routeChange2 = () =>{ 
     let path = '/login'; 
     navigate2(path);
   }
+
+  const routeChange3 = () =>{ 
+    let path = '/list/bookings'; 
+    navigate2(path);
+  }
+
 
     useEffect(()=>{
       const responsiveness = () => window.innerWidth < 900 ? setMobile(true) : setMobile(false)
@@ -70,7 +70,6 @@ const Header = () => {
         <img src={logo} className={classes.logo} alt="logo"/>
       </Link>
       <div className={classes.right}>
-          <Button style={{fontFamily:'Poppins'}}>Sign In</Button>
           <Button onClick={routeChange2}><Avatar className={classes.avatar}/></Button>
       </div>
     </Toolbar>
@@ -79,12 +78,12 @@ const Header = () => {
 
   const displayDesktop = () => (
     <Toolbar className={classes.toolbar} style={{paddingLeft:"0px"}}>
-        <Link to="/search">
+        <Link to="/search/user">
           <img src={logo} className={classes.logo} alt="logo"/>
         </Link>
         <div className={classes.right}>
-          <Button onClick={routeChange}>Sign In</Button>
-          <Button onClick={routeChange2}><Avatar className={classes.avatar}/></Button>
+          <Button onClick={routeChange3}>My Bookings</Button>
+          <Button disabled><Avatar /></Button>
         </div>
       </Toolbar>
     )
@@ -137,4 +136,4 @@ const useStyle = makeStyles((theme)=>({
   }
 }))
 
-export default Header
+export default HeaderUs

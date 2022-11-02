@@ -7,11 +7,11 @@ import { addTurn } from '../redux/slices/turnSlice';
 import './styles/styles.css'
 import SearchIcon from "@material-ui/icons/Search";
 import { Footer } from './footer.js';
-import Header from './header';
 import vine from '../imagenes/wine.gif';
+import HeaderUs from './headerUs';
 
 
-export const Searchpage = () => {
+export const SearchpageUs = () => {
   const dispatch = useDispatch();
   const [values, setValues] = useState()
   const [isLoading, setIsLoading] = useState(true)
@@ -64,7 +64,7 @@ const filterAdress=(filterData)=>{
 }
   return (
     <> 
-    <Header />
+    <HeaderUs />
       <div className='filters'> 
         <div className={classes.center} style={{border:"none", width: "566px"}}>
           <SearchIcon/><input value={search} onChange={(e) => onChangeName(e)} placeholder='Search name..' inputProps={{className: classes.input}} style={{backgroundColor:"rgb(255 255 255)", fontFamily:'Poppins'}}/>
@@ -113,7 +113,7 @@ const filterAdress=(filterData)=>{
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <NavLink to='/booking' style={{textDecoration:"none"}}>
+                    <NavLink to='/booking/user' style={{textDecoration:"none"}}>
                       <Button variant="contained"  onClick={() => handleSendProps(prov.prov_id)} style={{backgroundColor:"#feb824", color: 'white', fontFamily:'Poppins'}}>
                         Booking
                       </Button>

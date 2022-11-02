@@ -63,7 +63,7 @@ export const Login = () => {
                               </div>
                           </form>
                                 {
-                                    success && <Navigate to="/search"/>
+                                    success && <Navigate to="/search/user"/>
                                 }
                           <div class="social-login">
                               <span class="social-label">Or login with</span>

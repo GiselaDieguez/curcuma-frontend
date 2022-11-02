@@ -697,3 +697,19 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
   .cardShadow { 
     box-shadow: 2px 1px 0px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)
   }
+
+  .list-group {
+    --bs-list-group-border-color: none !important;
+  }
+
+  .reservations {
+    max-width: 640px;
+  }
+
+  
+.linea {
+  border-top: 1px solid #d3d3d3;
+  height: 2px;
+  padding: 0;
+  margin: 20px auto 0 auto;
+}
