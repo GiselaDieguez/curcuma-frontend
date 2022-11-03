@@ -1,7 +1,7 @@
-import { Button } from 'bootstrap'
 import React, { useEffect, useState } from 'react'
 import { url } from '../api/api'
 import HeaderUs from './headerUs'
+import vine from '../imagenes/wine.gif'
 
 export const ListBookings = () => {
     const [values, setValues] = useState()
@@ -16,26 +16,28 @@ export const ListBookings = () => {
             });
     }, [loading]);
 
-    console.log(values);
-
     return (
         <>
             <HeaderUs />
             {
                 loading ? (
-                    <div>Cargando...</div>
+                    <img src={vine} class="vineImg" style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-30%, -30%)',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        padding: '20px 0px',
+                        margin: '50px 0px',
+                        width: '200px',
+                        height: 'auto'
+                    }}></img>
                 ) : (
                     <div className='container mt-5 shadowLog reservations'>
                         <div className="list-group">
-                            {values === undefined ||
-                                (values[0].date_res ||
-                                    values[0].time_res ||
-                                    values[0].name_prov ||
-                                    values[0].tel_prov ||
-                                    values[0].mail_prov ||
-                                    values[0].adress_prov
-                                ) === null ? (
-                                <div>No reservations yet.</div>
+                            {!values[0] ? (
+                                <a>No reservations yet.</a>
                             ) : (
                                 values.map((booking, index) => (
                                     <><a href="#" className="list-group-item list-group-item-action" aria-current="true" key={index}>
