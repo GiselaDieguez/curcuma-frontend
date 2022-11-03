@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { url } from '../api/api'
 import HeaderUs from './headerUs'
 import vine from '../imagenes/wine.gif'
+import { Footer } from './footer'
 
 export const ListBookings = () => {
     const [values, setValues] = useState()
@@ -58,9 +59,11 @@ export const ListBookings = () => {
                             )
                             }
                         </div>
+                       
                     </div>
                 )
             }
+             <Footer />
         </>
     )
 }
