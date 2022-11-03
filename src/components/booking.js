@@ -84,10 +84,10 @@ export const Booking = () => {
                                         </div>
                                         <div className="form-group">
                                             <label for="time"><i className="zmdi zmdi-account"></i></label>
-                                            <input onChange={(e) => onChange(e)} type="time" value={values.time_res} name="time_res" id="time_res" placeholder="Hour" autoComplete="off" required/>
+                                            <input onChange={(e) => onChange(e)} type="time" value={values.time_res} name="time_res" id="time_res" placeholder="Hour" min="08:00" max="23:00" autoComplete="off" required/>
                                         </div>
                                         <div className="form-group">
-                                            <input onChange={(e) => onChange(e)} type="text" value={first.name_prov} name="prov_id" id="prov_id" placeholder="Proov"  disabled/>
+                                            <input onChange={(e) => onChange(e)} type="text" value={first.name_prov} name="prov_id" id="prov_id"  disabled/>
                                         </div>
                                         {
                                             error && <p style={{color: "red"}}>{error}</p>
