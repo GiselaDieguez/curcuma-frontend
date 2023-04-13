@@ -80,7 +80,7 @@ export const Booking = () => {
                                     <form className="booking-form" id="booking-form" onSubmit={(e) => onSubmit(e)}>
                                         <div className="form-group">
                                             <label for="date"><i className="zmdi zmdi-account"></i></label>
-                                            <input onChange={(e) => onChange(e)} type="date" value={values.date_res} name="date_res" id="date_res" placeholder="Your Date" autoComplete="off" min="2022-11-04" max="2023-01-01" required/>
+                                            <input onChange={(e) => onChange(e)} type="date" value={values.date_res} name="date_res" id="date_res" placeholder="Your Date" autoComplete="off" min="2022-11-04" max="2023-12-31" required/>
                                         </div>
                                         <div className="form-group">
                                             <label for="time"><i className="zmdi zmdi-account"></i></label>
